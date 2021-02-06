@@ -1,0 +1,16 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/music/music"
+  ],
+  "requiredBackgroundModes": ["audio", "location"],
+  "window": {
+    "navigationBarTitleText": "My Music Space",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#cccccc",
+    "backgroundColor": "#cccccc"
+  },
+  "sitemapLocation": "sitemap.json"
+}

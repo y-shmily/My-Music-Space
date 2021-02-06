@@ -1,0 +1,106 @@
+<view class="main">
+  <!-- 搜索栏的页签  固定高度 -->
+  <form class="search_module portals_item_css" action="success" method="post">
+    <view class="search">
+      <input class="search_input search_input_css" type="text" focus="true" confirm-type="search"
+        bindinput="search_input" placeholder="{{search_input_txt}}" value="{{search_input_text}}" />
+      <button class="search_btn portals_item_css" hover-class="hover_portals_item" type="submit"
+        bindtap="search_btn">搜索</button>
+    </view>
+  </form>
+  <!-- 测试，可删除 -->
+  <text class="search_input_test portals_item_css"
+    wx:if="{{search_input_text != ''}}">您输入的搜索内容为：{{search_input_text}}</text>
+  <!-- 标签栏的页签  自适应高度 -->
+  <view class="card portals_item_css">
+    <view class="tabs" wx:if="{{tabs !== null}}">
+      <view bindtap="activeNav" data-index="{{ index }}"
+        class="item btn {{ index === currentIndexNav ? 'active' : '' }}" wx:for="{{tabs}}" wx:key="index">
+        <text class="item_txt">{{item}}</text>
+      </view>
+    </view>
+    <!-- 内容区域  自适应高度 -->
+    <scroll-view class="content" enable-flex="true" scroll-y="true">
+      <view class="recommend" wx:if="{{currentIndexNav == 0}}">
+        <!-- 轮播图图片模块 -->
+        <view class="side">
+          <swiper class="swiper_image portals_item_css" autoplay="true" interval="5000" indicator-dots="true"
+            indicator-color="#66CCFF" indicator-active-color="#CC99FF" circular="true">
+            <swiper-item wx:for="{{side}}" wx:key="index">
+              <image class="swiper_image_item portals_item_css" src="{{item}}"></image>
+            </swiper-item>
+          </swiper>
+        </view>
+        <!-- 歌曲类型模块 -->
+        <view class="portals">
+          <view class="portals_item portals_item_css" bindtap="hover_portals_item" hover-class="hover_portals_item"
+            wx:for="{{portals}}" wx:key="key">
+            <view class="portals_item_imgs search_input_css" hover-class="portals_item_css">
+              <image class="portals_item_img" src="{{ item.img_address }}"></image>
+            </view>
+            <view class="portals_item_txt search_input_css" hover-class="portals_item_css">{{item.name}}</view>
+          </view>
+        </view>
+        <!-- 推荐歌单模块 自适应高度-->
+        <view class="list_title">
+          <text class="list_title_txt">推荐歌单</text>
+        </view>
+      </view>
+      <view class="list">
+        <view class="list_info">
+          <block wx:for="{{list_txt}}" wx:key="index">
+            <view class="list_info_item portals_item_css" hover-class="hover_portals_item"
+              wx:if="{{currentIndexNav == 0}}">
+              <navigator class="list_info_nav" bindtap="list_info_nav" url="#" data-music="{{index}}"
+                open-type="navigate">
+                <view class="portals_item_css" hover-class="hover_portals_item">
+                  <image class="list_info_item_image portals_item_css" src="{{item.img_address}}"></image>
+                </view>
+                <view class="list_info_item_txt_css portals_item_css" hover-class="hover_portals_item">
+                  <text class="list_info_item_txt">{{item.name}}\n</text>
+                  <text class="list_info_item_txt_sm">{{item.name_txt}}</text>
+                </view>
+              </navigator>
+            </view>
+            <block class="music_ranking" wx:elif="{{currentIndexNav == 1}}">
+              <text wx:if="{{index == 0}}" style="margin:auto">待更新</text>
+            </block>
+            <block class="music_ranking" wx:elif="{{currentIndexNav == 2}}">
+              <text wx:if="{{index == 0}}" style="margin:auto">待更新</text>
+            </block>
+            <block wx:elif="{{currentIndexNav == 3}}">
+              <view class="music_ranking_item portals_item_css" bindtap="list_info_nav" data-music="{{index}}">
+                <image class="ranking_image ranking_item_css portals_item_css" src="{{item.img_address}}"></image>
+                <view class="ranking_info ranking_item_css">
+                  <text class="list_info_item_txt">{{item.name}}\n</text>
+                  <text class="list_info_item_txt_sm">{{item.name_txt}}</text>
+                </view>
+              </view>
+            </block>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+    <!-- <scroll-view wx:elif="{{currentIndexNav == 3}}" enable-flex="true" scroll-y="true">
+      <view class="music_ranking_item" wx:for="{{list_txt}}" wx:key="index">
+        <image></image>
+        <view class="music_info"></view>
+      </view>
+    </scroll-view> -->
+  </view>
+  <!-- 播放控制条  固定高度 -->
+  <view class="player portals_item_css" wx:if="{{Music_name != ''}}" bindtap="playtap">
+    <view class="player_poster">
+      <image class="player_poster_image portals_item_css" src="{{Music_img}}"></image>
+    </view>
+    <view class="player_info">
+      <text class="list_info_item_txt">{{Music_name}}\n</text>
+      <text class="list_info_item_txt_sm">{{Music_name_txt}}</text>
+    </view>
+    <view class="player_controls">
+      <!-- <image src="../../icons/icons-l/detail.png"></image>
+      <image src="../../icons/icons-l/paly.png"></image>
+      <image src="../../icons/icons-l/icon_nexttrack_24.png"></image> -->
+    </view>
+  </view>
+</view>

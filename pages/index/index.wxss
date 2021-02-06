@@ -1,0 +1,269 @@
+/** 
+  *搜索模块 
+*/
+.search_module {
+  width: 94%;
+  height: 100rpx;
+  margin: auto;
+  margin-top: 20rpx;
+}
+
+.search {
+  width: 95%;
+  display: flex;
+  margin: 30rpx auto;
+}
+
+/* 搜索框模块 */
+.search_input {
+  flex: 1;
+  height: 45rpx;
+  font-size: 24rpx;
+  transition: 0.7s ease;
+  padding: 0rpx 15rpx;
+  margin-right: 2%;
+}
+
+/**  
+  *可删除 
+*/
+.search_input_test {
+  width: 94%;
+  margin: auto;
+}
+
+/* 搜索按钮 */
+.search_btn {
+  width: 130rpx;
+  height: 50rpx;
+  font-size: 28rpx;
+  line-height: 32rpx;
+  text-align: center;
+  border: none;
+  margin: auto;
+  padding: 8rpx;
+}
+
+
+/**  
+  *主页模块
+*/
+
+/* 标签栏模块 */
+.tabs {
+  height: 80rpx;
+  display: flex;
+}
+
+.item {
+  flex: 1;
+  display: block;
+}
+
+.btn {
+  font-size: 22rpx;
+  line-height: 30rpx;
+  text-align: center;
+  border: none;
+  border-radius: 35rpx 35rpx 0px 0px;
+  padding: 25rpx 10rpx;
+  margin: 10rpx 10rpx 0rpx 10rpx;
+  transition-property: box-shadow, transform;
+  color: #757575;
+  box-shadow: 12rpx 0rpx 16rpx 0rpx #d4d4d4, -8rpx -8rpx 16rpx #ffffff;
+  transition: 0.7s ease;
+  background: linear-gradient(145deg, #83d6fd36, #99d6f5);
+}
+
+.btn.active {
+  font-size: 28rpx;
+  font-style: normal;
+  margin: 0rpx 10rpx;
+  padding: 30rpx 10rpx;
+  color: #000000;
+  border-bottom: 5rpx solid #0058fc;
+  transition-property: box-shadow, transform;
+  box-shadow: 10rpx 0rpx 10rpx 0rpx #5debf077, -8rpx -8rpx 16rpx #56dee777;
+  transition: 0.3s ease;
+  background: linear-gradient(145deg, #3daee26e, #4cc3ff91);
+}
+
+/* 主体模块 */
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  overflow: hidden;
+}
+
+.recommend {
+  width: 100%;
+}
+
+/* 轮播图模块 */
+.side {
+  width: 100%;
+  margin-top: 5rpx;
+}
+
+.swiper_image {
+  height: 280rpx;
+  box-shadow: -3rpx -2rpx 1rpx white, 4rpx 4rpx 15rpx rgba(0, 0, 0, 0.15);
+}
+
+.swiper_image_item {
+  width: 100%;
+  height: 100%;
+}
+
+/* 歌曲类型模块 */
+.portals {
+  display: flex;
+  width: 98%;
+  height: 190rpx;
+  margin: 20rpx auto;
+}
+
+.portals_item {
+  flex: 1;
+  margin: 0rpx 20rpx;
+}
+
+.portals_item_imgs {
+  width: 100rpx;
+  height: 100rpx;
+  display: block;
+  margin: 20rpx auto;
+  border-radius: 50%;
+}
+
+.portals_item_img {
+  width: 100%;
+  height: 100%;
+}
+
+.portals_item_txt {
+  width: 98%;
+  text-align: center;
+  margin: 10rpx auto;
+  color: #666666;
+  font-size: 28rpx;
+  display: block;
+}
+
+/* 主体内容模块 */
+.list {
+  flex: 1;
+  width: 100%;
+}
+
+.list_title {
+  width: 98%;
+  height: max-content;
+  margin-top: 20rpx;
+}
+
+.list_title_txt {
+  font-size: 32rpx;
+  margin: auto;
+}
+
+.list_info {
+  width: 100%;
+  height: 460rpx;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10rpx;
+}
+
+.list_info_nav {
+  width: 100%;
+  height: 100%;
+}
+
+.list_info_item {
+  width: 26%;
+  padding: 15rpx;
+  margin: 10rpx;
+}
+
+.list_info_item_image {
+  display: block;
+  width: 100%;
+  height: 180rpx;
+  margin: auto;
+}
+
+.list_info_item_txt_css {
+  width: 90%;
+  padding: 10rpx;
+  margin: auto;
+  margin-top: 10rpx;
+}
+
+.list_info_item_txt {
+  font-size: 22rpx;
+}
+
+.list_info_item_txt_sm {
+  font-size: 20rpx;
+  color: rgba(128, 123, 123, 0.651);
+}
+
+/* 排行榜模块 */
+.music_ranking_item {
+  width: 100%;
+  height: 130rpx;
+  display: flex;
+  margin: 10rpx 20rpx 10rpx 0rpx;
+}
+
+.ranking_item_css {
+  margin: auto;
+  margin-left: 20rpx;
+}
+
+.ranking_image {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.ranking_info {
+  flex: 1;
+  text-align: left;
+}
+
+/** 
+  *播放条模块 
+*/
+
+.player_poster_image {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 10rpx;
+}
+
+.player_info {
+  flex: 6;
+  padding: 11rpx;
+}
+
+.info text {
+  display: block;
+  font-size: 28rpx;
+}
+
+.player_controls {
+  flex: 3;
+  display: flex;
+  padding: 5rpx;
+}
+
+.player_controls image {
+  flex: 1;
+  width: 60rpx;
+  height: 70rpx;
+  margin: 10rpx;
+}

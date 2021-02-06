@@ -1,0 +1,55 @@
+.music_modle {
+  margin: 5% auto;
+  padding: 20rpx;
+}
+
+.music_info_css {
+  margin: 1% auto;
+}
+
+.music_img {
+  width: 500rpx;
+  height: 500rpx;
+  margin: 5% auto;
+  border-radius: 50%;
+}
+
+.music_name {
+  font-size: 38rpx;
+}
+
+.music_name_txt {
+  color: #999;
+}
+
+.percent-num {
+  flex: 1;
+  display: flex;
+  font-size: 28rpx;
+}
+
+.music-prog {
+  flex: 1;
+  height: 10rpx;
+  margin: auto 20rpx;
+  color: #2afc00;
+  background-color: #6decbb94;
+}
+
+.progress_num {
+  width: 100rpx;
+  height: max-content;
+  margin: auto;
+}
+
+
+.play-it {
+  flex: 1;
+}
+
+.play_btn {
+  width: max-content;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  margin: auto;
+}

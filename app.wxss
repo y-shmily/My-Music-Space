@@ -1,0 +1,55 @@
+page{
+  height: 100%;
+  font-size: 24rpx;
+  background-color: #ffffff;
+  align-items: center;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #cccccc, #99d6f5);
+}
+.main{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 15rpx 15rpx 0rpx 15rpx;
+  margin: 20rpx auto;
+  background-color: rgba(0, 0, 0, 0);
+  flex-basis: 50%;
+}
+
+.search_input_css{
+  border: none;
+  border-radius: 20rpx;
+  outline: none;
+  box-sizing: border-box;
+  box-shadow: inset 2px 2px 6px #babecc, inset -4px -5px 8px #fff;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 1px 1px 0 rgba(104, 99, 99, 0.267);
+  background-color: #ffffff00;
+}
+.portals_item_css{
+  border-radius: 20rpx;
+  transition-property: box-shadow, transform;
+  box-shadow: -6rpx -5rpx 10rpx white, 0rpx 4rpx 15rpx rgba(0, 0, 0, 0.15);
+  transition: 0.3s ease;
+}
+.hover_portals_item{
+  color: rgba(128, 123, 123, 0.651);
+  transition-property: box-shadow, transform;
+  box-shadow: inset 8px 8px 16px #d4d4d457, inset -8px -8px 16px #ffffff4f;
+  transition: 0.3s ease;
+}
+
+.player{
+  height: 100rpx;
+  width: 95%;
+  display: flex;
+  margin: auto;
+  margin-bottom: 20rpx;
+}

@@ -1,0 +1,26 @@
+<view class="main">
+  <!-- <video style="width: 100%;height:400rpx;margin:1px; custom-cache=”{{false}}”" src="https://vd3.bdstatic.com/mda-jkn4s7que25700w8/sc/mda-jkn4s7que25700w8.mp4?v_from_s=hba_videoui_4135&auth_key=1611646406-0-0-dc3b5064936496f45ff3a1738cbe15af&bcevod_channel=searchbox_feed&pd=1&pt=3&abtest=" controls="true" autoplay="true" loop="true" initial-time="0" enable-auto-rotation="true" title="腾讯视频"></video> -->
+  <!-- 歌曲信息展示 自适应高度-->
+  <view class="card portals_item_css music_modle">
+    <image class="music_img portals_item_css" src="{{img_address}}"></image>
+    <view class="music_name music_info_css">{{music_name}}</view>
+    <view class="music_name_txt music_info_css">{{music_name_txt}}</view>
+    <view class="percent-num">
+      <progress class="music-prog" bindtouchmove="setTouchMove" percent="{{musicPercent}}"></progress>
+      <view class="progress_num">
+        <text wx:if="{{musicPercent > 0}}">{{musicPercent}}</text>
+        <text wx:else="{{musicPercent}}">0</text>%
+      </view>
+    </view>
+  </view>
+  <!-- 播放模块 固定高度-->
+  <view class="player portals_item_css">
+    <view class="play-it portals_item_css" hover-class="hover_portals_item" bindtap="playMusic"
+      data-music_name="{{music_name}}" data-img_address="{{img_address}}" data-music_address="{{music_address}}">
+      <view class="play_btn">
+        <view wx:if="{{play}}">点击暂停</view>
+        <view wx:else="{{play}}">点击播放</view>
+      </view>
+    </view>
+  </view>
+</view>
